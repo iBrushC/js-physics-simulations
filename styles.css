@@ -1,0 +1,99 @@
+.center-page {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 1vh;
+}
+
+.column {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.fill-width {
+    width: 100%
+}
+
+.fill-height {
+    height: 100%
+}
+
+.page-link-button {
+    padding: 0.4vh;
+
+    text-decoration: none;
+    text-align: center;
+    align-self: center;
+    
+    border-width: 0.3vh;
+    border-style: solid;
+    border-radius: 0.5vh;
+}
+
+.simulation-canvas {
+    display: flex;
+    width: 80vmin;
+    /* height: 30vh; */
+
+    border-width: 0.2vh;
+    border-style: solid;
+    border-radius: 0.3vh;
+}
+
+.checkbox-row {
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.2vmin;
+    padding: 0.8vmin;
+    
+    border-width: 0.2vmin;
+    border-style: solid;
+    border-radius: 0.5vmin;
+}
+
+.button-row {
+    width: 70%;
+    justify-content: space-around;
+    margin: 0.2vmin;
+    padding: 0.8vmin;
+    
+    border-width: 0.2vmin;
+    border-style: solid;
+    border-radius: 0.5vmin;
+}
+
+.dropdown-column {
+    width: 70%;
+    justify-content: space-around;
+    margin: 0.2vmin;
+    padding: 0.8vmin;
+    
+    border-width: 0.2vmin;
+    border-style: solid;
+    border-radius: 0.5vmin;
+}
+
+.slider-column {
+    width: 70%;
+    justify-content: space-around;
+    margin: 0.2vmin;
+    padding: 0.6vmin;
+    
+    border-width: 0.2vmin;
+    border-style: solid;
+    border-radius: 0.5vmin;
+}

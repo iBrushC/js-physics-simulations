@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Body Simulation</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="center-page">
+        <div class="column">
+            <h1>N-Body Simulation</h1>
+            <canvas class="simulation-canvas" width="800" height="600" id="nbody-canvas">HTML canvases are not supported on your browser.</canvas>
+            <div class="row fill-width">
+                <div class="column">
+                    <h2>Controls</h2>
+                    <div class="row fill-width">
+                        <!-- Non checkbox values -->
+                        <div class="column">
+                            <div class="row button-row">
+                                <button onclick="initializeBodies()">Restart Simulation</button>
+                            </div>
+                            <div class="column dropdown-column">
+                                <label for="input-show-quadtree">Solver Mode</label>
+                                <select id="input-solver-mode">
+                                    <option value="barnes-hut">Barnes-Hut - O(n log n)</option>
+                                    <option value="naive">Brute Force - O(n²)</option>
+                                </select>
+                            </div>
+                            <div class="column slider-column">
+                                <label for="input-show-quadtree">Number of Bodies: 500</label>
+                                <input type="range" value="500" min="0" max="15000" id="input-number-of-particles">
+                            </div>
+                            <div class="column slider-column">
+                                <label for="input-timestep-size">Timestep Multiplier: 0.1</label>
+                                <input type="range" value="0.1" min="0.01" max="1" step="0.01" id="input-timestep-size">
+                            </div>
+                            <div class="column slider-column">
+                                <label for="input-quadtree-split">Quadtree Split Value: 25</label>
+                                <input type="range" value="25" min="1" max="100" step="1" id="input-quadtree-split">
+                            </div>
+                        </div>
+
+                        <!-- Checkbox values -->
+                        <div class="column">
+                            <div class="row checkbox-row">
+                                <label for="input-show-particles">Show Particles</label>
+                                <input type="checkbox" id="input-show-particles" checked>
+                            </div>
+                            <div class="row checkbox-row">
+                                <label for="input-color-by-velocity">Color Particles By Velocity</label>
+                                <input type="checkbox" id="input-color-by-velocity">
+                            </div>
+                            <div class="row checkbox-row">
+                                <label for="input-show-quadtree">Show Quadtree</label>
+                                <input type="checkbox" id="input-show-quadtree">
+                            </div>
+                            <div class="row checkbox-row">
+                                <label for="input-show-com">Show Centers of Mass</label>
+                                <input type="checkbox" id="input-show-com">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2>Status</h2>
+                    <p id="fps-text">Frames Per Second: </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/nbody.js"></script>
+</body>
+</html>
